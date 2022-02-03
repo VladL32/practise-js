@@ -1,0 +1,64 @@
+<html>
+    <head> <title> Homework </title> </head>
+    <body> 
+        <script> alert(" It was made by Likhachev Vladislav, group CS-2113s ") </script>
+
+<script type="text/javascript">   
+    function zero_first_format(value)
+    { if (value < 10) {value='0'+value;}
+        return value; }
+
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var day1 = current_datetime.getDate();
+        var month = current_datetime.getMonth();
+        var year = current_datetime.getFullYear(); 
+        var dayweek = current_datetime.getDay();
+        var days = ["Sunday", "Monday", "Tuesday", "Wendsday", "Thursday", "Friday", "Saturday"];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var hours = zero_first_format(current_datetime.getHours());
+        var minutes = zero_first_format(current_datetime.getMinutes());
+        var seconds = zero_first_format(current_datetime.getSeconds());
+        var last = (2024-year)*355+(6-month)*30-day1;
+    </script> 
+     <script> alert("Year : "+ year+'\n'+ "Today is :"+days[dayweek]+'\n'+
+     "Date : "+ day+'\n'+ "Month: "+months[month]+
+     '\n'+"Currrent time is :"+hours+":"+minutes+":"+seconds+'\n'+
+     last+" days left until freedom!") 
+     </script>
+     <h3> First Number: <input id="n1"></h3>
+     <h3> Second Number: <input id="n2"></h3>
+     <button onclick="multiply()"> Multiply </button>
+     <button onclick="divide()"> Divide </button>
+     <button onclick="plus()"> Plus </button>
+     <button onclick="minus()"> Minus </button>
+    <h3> The result is : </h3> 
+    <h3 id="res">  </h3>  
+    <script>
+        function multiply(){ 
+          var num1 = Number(document.getElementById("n1").value);
+          var num2 = Number(document.getElementById("n2").value);
+          var result = num1 * num2;
+          document.getElementById("res").innerHTML = result;
+          }
+          function divide(){ 
+          var num1 = Number(document.getElementById("n1").value);
+          var num2 = Number(document.getElementById("n2").value);
+          var result = num1 / num2;
+          document.getElementById("res").innerHTML = result;
+          }
+          function plus(){ 
+          var num1 = Number(document.getElementById("n1").value);
+          var num2 = Number(document.getElementById("n2").value);
+          var result = num1 + num2;
+          document.getElementById("res").innerHTML = result;
+          }
+          function minus(){ 
+          var num1 = Number(document.getElementById("n1").value);
+          var num2 = Number(document.getElementById("n2").value);
+          var result = num1 - num2;
+          document.getElementById("res").innerHTML = result;
+          }
+    </script>
+    </body>
+</html>
